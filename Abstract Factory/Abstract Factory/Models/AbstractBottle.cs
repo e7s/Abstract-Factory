@@ -10,4 +10,20 @@ namespace Abstract_Factory.Models
     {
         public abstract void Interact(AbstractWater water);
     }
+
+    class CocaColaBottle : AbstractBottle
+    {
+        public override void Interact(AbstractWater water)
+        {
+            Console.WriteLine(this + " interact with " + water);
+        }
+    }
+
+    class PepsiBottle : AbstractBottle
+    {
+        public override void Interact(AbstractWater water)
+        {
+            Console.WriteLine(this + " interact with " + water);
+        }
+    }
 }

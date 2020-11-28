@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Abstract_Factory.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,15 @@ namespace Abstract_Factory
     {
         static void Main(string[] args)
         {
+            Client client = null;
+
+            client = new Client(new CocaColaFactory());
+            client.Run();
+
+            client = new Client(new PepsiFactory());
+            client.Run();
+
+            Console.ReadLine();
         }
     }
 }

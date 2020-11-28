@@ -9,4 +9,14 @@ namespace Abstract_Factory.Models
     abstract class AbstractWater
     {
     }
+
+    class CocaColaWater : AbstractWater
+    {
+
+    }
+
+    class PepsiWater : AbstractWater
+    {
+
+    }
 }
