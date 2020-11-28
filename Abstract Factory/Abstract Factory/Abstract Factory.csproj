@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\AbstractBottle.cs" />
+    <Compile Include="Models\AbstractFactory.cs" />
+    <Compile Include="Models\AbstractWater.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
