@@ -19,6 +19,13 @@ namespace Abstract_Factory
             client = new Client(new PepsiFactory());
             client.Run();
 
+            ClientDynamic clientDynamic;
+            clientDynamic = new ClientDynamic(Factory.ConcreteFactory1);
+            clientDynamic.Run();
+
+            clientDynamic = new ClientDynamic(Factory.ConcreteFactory2);
+            clientDynamic.Run();
+
             Console.ReadLine();
         }
     }

@@ -38,4 +38,42 @@ namespace Abstract_Factory.Models
             return new PepsiBottle();
         }
     }
+
+    //using interface
+    interface IAbstractFactory
+    {
+        dynamic Make(Product product);
+    }
+
+    class ConcreteFactory1 : IAbstractFactory
+    {
+        dynamic product;
+
+        public dynamic Make(Product product)
+        {
+            //Получение полного квалифиционного имени продукта 1
+            string name = GetType().Namespace + "." + product + "1";
+
+            //Динамическое создание продукта семейства - 1
+            this.product = Activator.CreateInstance(Type.GetType(name));
+
+            return this.product;
+        }
+    }
+
+    class ConcreteFactory2 : IAbstractFactory
+    {
+        dynamic product;
+
+        public dynamic Make(Product product)
+        {
+            //Получение полного квалифиционного имени продукта 2
+            string name = GetType().Namespace + "." + product + "2";
+
+            //Динамическое создание продукта семейства - 2
+            this.product = Activator.CreateInstance(Type.GetType(name));
+
+            return this.product;
+        }
+    }
 }
